@@ -1,1 +1,22 @@
 # TODO: add form to create a new sb
+
+
+<h1>Add a New Surfboard</h1>
+
+<%= form_with(model: @surfboard, local: true) do |form| %>
+  <%= form.label :type %>
+  <%= form.text_field :type %>
+
+  <%= form.label :img_url %>
+  <%= form.text_field :img_url %>
+
+  <%= form.label :description %>
+  <%= form.text_area :description %>
+
+  <%= form.label :availibility %>
+  <%= form.date_field :availibility %>
+  <%= form.label :location %>
+  <%= form.text_field :location %>
+
+  <%= form.submit %>
+<% end %>
