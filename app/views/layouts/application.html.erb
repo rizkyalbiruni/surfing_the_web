@@ -11,8 +11,22 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
+
+    </div>
+   <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
+    <%= render "shared/navbar" %>
+
+    <header id='header'>
+     <h1> Rent a surfboard </h1>
+    </header>
+
+
+
+    <footer id='footer'>
+      <%= link_to "Surfboards", "#Surfboards", class: "nav-link" %>
+      <%= link_to "Home", "#Home", class: "nav-link" %>
+    </footer>
   </body>
 </html>
