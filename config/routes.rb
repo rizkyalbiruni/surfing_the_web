@@ -18,11 +18,11 @@ Rails.application.routes.draw do
       post :decline
     end
   end
-  
+
   resources :surfboards, only: [:destroy]
+
+  get "/dashboard", to: "pages#dashboard"
       # post 'approve', on: :member
       # post 'decline', on: :member
 
-  get "/dashboard", to: "pages#dashboard", as: "dashboard"
-  # root "posts#index"
 end
