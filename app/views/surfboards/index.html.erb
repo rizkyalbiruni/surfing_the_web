@@ -6,7 +6,7 @@
   <ul>
     <% @surfboards.each do |surfboard| %>
       <li>
-        <%# <%= image_tag(surfboard.img_url.presence || "https://source.unsplash.com/random?surfing", class: "surfboard-image") %> %>
+        <%= image_tag(surfboard.img_url.presence || "https://source.unsplash.com/random?surfing", class: "surfboard-image") %>
         <h3><%= surfboard.board_type %></h3>
         <p>Description: <%= surfboard.description %></p>
         <p>Location: <%= surfboard.location %></p>
