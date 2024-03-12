@@ -1,9 +1,11 @@
 class BookingsController < ApplicationController
   def show
-    @surfboard = Surfboard.find(params[:id])
+    @surfboard = Surfboard.find(params[:surfboard_id])
+    @booking.surfboard = @surfboard
   end
 
   def new
+    @surfboard = Surfboard.find(params[:surfboard_id])
     @booking = Booking.new
   end
 
@@ -23,12 +25,12 @@ class BookingsController < ApplicationController
   end
 
   def decline
-    
+
   end
 
   private
 
   def booking_params
-    params.require(:booking).permit(:user_id, :surfboard_id, :start_date, :end_date)
+    params.require(:booking).permit(:start_date, :end_date)
   end
 end
