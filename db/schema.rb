@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_03_11_152604) do
+ActiveRecord::Schema[7.1].define(version: 2024_03_12_133418) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -26,10 +26,10 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_11_152604) do
   end
 
   create_table "surfboards", force: :cascade do |t|
-    t.string "type"
+    t.string "board_type"
     t.string "img_url"
     t.text "description"
-    t.string "availiblity"
+    t.integer "status", default: 0
     t.string "location"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
