@@ -1,0 +1,61 @@
+body, .description {
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  color: #fff;
+  line-height: 1.6;
+}
+
+.video-background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.navbar {
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 2;
+}
+
+.main-header {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.main-header h1 {
+  font-family: 'Fahkwang', sans-serif;
+  font-size: 3em;
+  font-weight: 700;
+  font-style: italic;
+  margin: 0;
+  padding: 0;
+}
+
+.main-header p {
+  font-family: 'Fahkwang', sans-serif;
+  font-size: 1em;
+  font-style: italic;
+  margin-top:1px;
+  padding: 0;
+}
+
+.description {
+  font-size: 0.9em;
+  font-weight: 300;
+  letter-spacing: 1px;
+  position: fixed;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
