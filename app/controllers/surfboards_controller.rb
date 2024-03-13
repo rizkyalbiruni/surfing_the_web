@@ -13,6 +13,7 @@ class SurfboardsController < ApplicationController
 
   def create
     @surfboard = Surfboard.new(surfboard_params)
+    @surfboard.user_id = current_user.id
     if @surfboard.save
       redirect_to surfboard_path(@surfboard)
     else
