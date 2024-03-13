@@ -2,10 +2,9 @@
   justify-content: space-between;
   background: #000;
   letter-spacing: 0.05em;
-  color: white
+  color: white;
 
-
-  a, .navbar-brand {
+  .navbar-brand {
     color: #fff;
     &:hover {
       color: lighten(#fff, 10%);
