@@ -30,6 +30,6 @@ class SurfboardsController < ApplicationController
   private
 
   def surfboard_params
-    params.require(:surfboard).permit(:board_type, :description, :location, :img_url, :availibility , :user_id)
+    params.require(:surfboard).permit(:type, :description, :location, :img_url)
   end
 end
