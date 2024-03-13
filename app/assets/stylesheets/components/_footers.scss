@@ -1,13 +1,32 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content-wrap {
+  flex: 1;
+}
+
 #footer {
   background-color: #000000;
-  color: #ff1616;
+  color: #ffffff;
   padding: 20px;
   text-align: center;
 }
 
+.nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 10px;
 
-  .nav-link {
+  &:hover {
     color: #ff1616;
-    text-decoration: none;
-    margin: 0 10px;
+    text-decoration: underline;
   }
+}
