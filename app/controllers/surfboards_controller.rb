@@ -22,6 +22,7 @@ class SurfboardsController < ApplicationController
   end
 
   def upload
+  @surfboard = Surfboard.new(surfboard_params)
   image_data = params[:file]
   uploaded_image = Cloudinary::Uploader.upload(image_data)
   image_url = uploaded_image['secure_url']
