@@ -12,7 +12,7 @@
     <% @user.bookings.each do |booking|%>
     <% duration_in_days = (booking.end_date - booking.start_date).to_i + 1 %>
     <li>
-    <%= booking.start_date.strftime("%A, %B %e") %> to <%= booking.end_date.strftime("%A, %B %e") %> - 
+    <%= booking.start_date.strftime("%B %e") %> to <%= booking.end_date.strftime("%B %e") %> -
     <strong>(<%= duration_in_days %> <%= 'day'.pluralize(duration_in_days) %>)</strong>
     </li>
     <% end %>
