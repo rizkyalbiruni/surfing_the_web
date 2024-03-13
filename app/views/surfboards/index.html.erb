@@ -8,9 +8,9 @@
       <li>
         <%= image_tag(surfboard.img_url.presence || "https://source.unsplash.com/random?surfing", class: "surfboard-image") %>
         <h3><%= surfboard.board_type %></h3>
-        <p>DESCRIPTION: <%= surfboard.description %></p>
-        <p>LOCATION: <%= surfboard.location %></p>
-        <p>AVAILABILITY: <%= surfboard.availibility %></p>
+        <p>description <%= surfboard.description %></p>
+        <p>location: <%= surfboard.location %></p>
+        <p>availibility: <%= surfboard.availibility %></p>
       </li>
     <% end %>
   </ul>
