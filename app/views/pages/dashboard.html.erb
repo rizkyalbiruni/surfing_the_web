@@ -10,6 +10,10 @@
   <h2> My Bookings: </h2>
   <ul>
     <% @user.bookings.each do |booking|%>
-    <li> <%= booking.start_date %> to <%= booking.end_date %> </li>
+    <% duration_in_days = (booking.end_date - booking.start_date).to_i + 1 %>
+    <li>
+    <%= booking.start_date.strftime("%A, %B %e") %> to <%= booking.end_date.strftime("%A, %B %e") %> - 
+    <strong>(<%= duration_in_days %> <%= 'day'.pluralize(duration_in_days) %>)</strong>
+    </li>
     <% end %>
   </ul>
