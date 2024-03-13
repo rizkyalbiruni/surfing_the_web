@@ -2,7 +2,7 @@ body, .description {
   font-family: 'Nunito', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #000;
+  background-color: white;
   color: #fff;
   line-height: 1.6;
 }
@@ -25,13 +25,18 @@ body, .description {
 }
 
 .main-header {
-  height: 100vh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   text-align: center;
+  z-index: 3;
 }
+
 
 .main-header h1 {
   font-family: 'Fahkwang', sans-serif;
