@@ -1,6 +1,14 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: #000;
+  color: #fff;
+
+  a, .navbar-brand {
+    color: #fff;
+    &:hover {
+      color: lighten(#fff, 10%);
+    }
+  }
 }
 
 .navbar-lewagon .navbar-collapse {
