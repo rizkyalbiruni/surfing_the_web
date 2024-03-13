@@ -1,9 +1,11 @@
 <h1>My Dashboard</h1>
 
 <p> Email: <%= @user.email %> <p>
-  <p> My Surfboards: </p>
+  <p> My Surfboards:  </p>
   <ul>
-    <li></li>
+    <%= @user.surfboards.each do |surfboard| %>
+    <li> <%= surfboard.board_type %> </li>
+    <% end %>
   </ul>
 
   <p> My Bookings: </p>
