@@ -9,3 +9,11 @@ eagerLoadControllersFrom("controllers", application)
 // Lazy load controllers as they appear in the DOM (remember not to preload controllers in import map!)
 // import { lazyLoadControllersFrom } from "@hotwired/stimulus-loading"
 // lazyLoadControllersFrom("controllers", application)
+
+import {v2 as cloudinary} from 'cloudinary';
+
+cloudinary.config({
+  cloud_name: 'dy5xo1paq',
+  api_key: '163165127278526',
+  api_secret: '********' // change *****
+});
