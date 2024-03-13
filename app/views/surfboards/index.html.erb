@@ -1,10 +1,14 @@
+
+
 <h1>ALL SURFBOARDS</h1>
 
 <% if @surfboards.any? %>
   <ul>
     <% @surfboards.each do |surfboard| %>
       <li>
-        <%= image_tag(surfboard.img_url.presence || "https://source.unsplash.com/random?surfing", class: "surfboard-image", width: 350) %>
+          <% @surfboards.photos.each do |photo| %>
+            <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+        <% end %>
         <h3><%= link_to surfboard.board_type, surfboard_path(surfboard) %></h3>
         <p>Description: <%= surfboard.description %></p>
         <p>Location: <%= surfboard.location %></p>
@@ -16,4 +20,12 @@
   <p>No surfboards found.</p>
 <% end %>
 
-<%= link_to "NEW SURFBOARD", new_surfboard_path %>
+
+
+<%= link_to "New Surfboard", new_surfboard_path %>
+
+
+<%# <!-- app/views/articles/show.html.erb -->
+<% @article.photos.each do |photo| %>
+  <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+<% end %> %>

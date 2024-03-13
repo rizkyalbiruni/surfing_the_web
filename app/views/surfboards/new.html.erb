@@ -6,7 +6,7 @@
 
       <%= form.input :board_type %>
 
-      <%= form.input :photos, as: :file %>
+      <%= form.input :photos, as: :file, input_html: { multiple: true } %>
 
       <%= form.input :description %>
 
