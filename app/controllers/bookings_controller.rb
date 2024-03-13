@@ -18,6 +18,7 @@ class BookingsController < ApplicationController
     @user = current_user
     @booking = Booking.new(booking_params)
     @booking.surfboard = @surfboard
+    @booking.user = @user
     if @booking.save
       redirect_to booking_path(@booking)
     else
