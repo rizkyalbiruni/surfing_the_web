@@ -1,0 +1,7 @@
+<h2>All My Bookings</h2>
+
+<ul>
+  <% @bookings.each do |booking| %>
+  <li><%= booking.surfboard.board_type %> - <%= booking.start_date %> - <%= booking.end_date %></li>
+  <% end %>
+</ul>
