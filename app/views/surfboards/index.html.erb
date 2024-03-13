@@ -1,6 +1,6 @@
 <!-- app/views/surfboards/index.html.erb -->
 
-<h1>All Surfboards</h1>
+<h1>ALL SURFBOARDS</h1>
 
 <% if @surfboards.any? %>
   <ul>
@@ -8,9 +8,9 @@
       <li>
         <%= image_tag(surfboard.img_url.presence || "https://source.unsplash.com/random?surfing", class: "surfboard-image") %>
         <h3><%= surfboard.board_type %></h3>
-        <p>Description: <%= surfboard.description %></p>
-        <p>Location: <%= surfboard.location %></p>
-        <p>Availability: <%= surfboard.availibility %></p>
+        <p>DESCRIPTION: <%= surfboard.description %></p>
+        <p>LOCATION: <%= surfboard.location %></p>
+        <p>AVAILABILITY: <%= surfboard.availibility %></p>
       </li>
     <% end %>
   </ul>
@@ -18,4 +18,4 @@
   <p>No surfboards found.</p>
 <% end %>
 
-<%= link_to "New Surfboard", new_surfboard_path %>
+<%= link_to "NEW SURFBOARD", new_surfboard_path %>

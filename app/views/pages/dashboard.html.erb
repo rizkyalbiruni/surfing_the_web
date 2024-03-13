@@ -1,11 +1,11 @@
-<h1>My Dashboard</h1>
+<h1>MY DASHBOARD</h1>
 
-<p> Email: <%= @user.email %> <p>
-  <p> My Surfboards:  </p>
+<p> E-MAIL: <%= @user.email %> <p>
+  <p> MY SURFBOARDS:  </p>
   <ul>
     <%= @user.surfboards.each do |surfboard| %>
     <li> <%= surfboard.board_type %> </li>
     <% end %>
   </ul>
 
-  <p> My Bookings: </p>
+  <p> MY BOOKINGS: </p>
