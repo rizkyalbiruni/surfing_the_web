@@ -1,5 +1,6 @@
 
-<h1>All Surfboards</h1>
+
+<h1>ALL SURFBOARDS</h1>
 
 <% if @surfboards.any? %>
   <ul>
@@ -11,7 +12,7 @@
         <h3><%= link_to surfboard.board_type, surfboard_path(surfboard) %></h3>
         <p>Description: <%= surfboard.description %></p>
         <p>Location: <%= surfboard.location %></p>
-        <p>Availability: <%= surfboard.availibility %></p>
+        <p>Availability: <%= surfboard.availability %></p>
       </li>
     <% end %>
   </ul>
@@ -20,8 +21,8 @@
 <% end %>
 
 
-<%= link_to "New Surfboard", new_surfboard_path %>
 
+<%= link_to "New Surfboard", new_surfboard_path %>
 
 
 <%# <!-- app/views/articles/show.html.erb -->
