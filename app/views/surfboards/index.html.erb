@@ -6,7 +6,6 @@
     <% @surfboards.each do |surfboard| %>
       <li class = "surfboard-card">
         <%= image_tag(surfboard.img_url.presence || "https://source.unsplash.com/random?surfing", class: "surfboard-image", width: 350) %>
-<<<<<<< HEAD
          <div class = "surfboard-info">
           <h3><%= link_to surfboard.board_type, surfboard_path(surfboard) %></h3>
             <p>Description: <%= surfboard.description %></p>
@@ -15,13 +14,6 @@
           </div>
         </li>
 </div>
-=======
-        <h3><%= link_to surfboard.board_type, surfboard_path(surfboard) %></h3>
-        <p>Description: <%= surfboard.description %></p>
-        <p>Location: <%= surfboard.location %></p>
-        <p>Availability: <%= surfboard.availability %></p>
-      </li>
->>>>>>> b36f40a41b97f808ae9214f4568bf61179baa796
     <% end %>
   </ul>
   </div>
