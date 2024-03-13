@@ -3,17 +3,22 @@
 <h1>All Surfboards</h1>
 
 <% if @surfboards.any? %>
+<div id='surfboard-container'>
   <ul>
     <% @surfboards.each do |surfboard| %>
-      <li>
+      <li class = "surfboard-card">
         <%= image_tag(surfboard.img_url.presence || "https://source.unsplash.com/random?surfing", class: "surfboard-image", width: 350) %>
-        <h3><%= link_to surfboard.board_type, surfboard_path(surfboard) %></h3>
-        <p>Description: <%= surfboard.description %></p>
-        <p>Location: <%= surfboard.location %></p>
-        <p>Availability: <%= surfboard.availibility %></p>
-      </li>
+         <div class = "surfboard-info">
+          <h3><%= link_to surfboard.board_type, surfboard_path(surfboard) %></h3>
+            <p>Description: <%= surfboard.description %></p>
+            <p>Location: <%= surfboard.location %></p>
+            <p>Availability: <%= surfboard.availibility %></p>
+          </div>
+        </li>
+</div>
     <% end %>
   </ul>
+  </div>
 <% else %>
   <p>No surfboards found.</p>
 <% end %>
