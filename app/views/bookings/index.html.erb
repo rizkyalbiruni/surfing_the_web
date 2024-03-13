@@ -2,6 +2,8 @@
 
 <ul>
   <% @bookings.each do |booking| %>
-  <li><%= booking.surfboard.board_type %><p><%= booking.start_date %> - <%= booking.end_date %></p></li>
+  <% duration_in_days = (booking.end_date - booking.start_date).to_i + 1 %>
+  <li>
+  <%= booking.surfboard.board_type %><p><%= booking.start_date.strftime("%B %e") %> - <%= booking.end_date.strftime("%B %e") %> <strong>(<%= duration_in_days %> <%= 'day'.pluralize(duration_in_days) %>)</strong></p></li>
   <% end %>
 </ul>
