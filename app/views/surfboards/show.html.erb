@@ -4,7 +4,7 @@
 <%= cl_image_tag @surfboard.photos.first.key, alt: @surfboard.board_type, width: 200 %>
           <p>Description: <%= @surfboard.description %></p>
           <p>Location: <%= @surfboard.location %></p>
-          <p>Availability: <%= surfboard.availibility %></p>
+          <p>Availability: <%= @surfboard.availibility %></p>
 
 
 <%= link_to "Book Now", new_surfboard_booking_path(@surfboard) %>
