@@ -1,5 +1,5 @@
 
-
+<div class="surfboards-index">
 <h1>ALL SURFBOARDS</h1>
 
 <% if @surfboards.any? %>
@@ -20,5 +20,5 @@
   <p>No surfboards found.</p>
 <% end %>
 
-
-<%= link_to "New Surfboard", new_surfboard_path %>
+ <%= link_to "CREATE NEW", new_surfboard_path, class: "create-new-link" %>
+</div>
