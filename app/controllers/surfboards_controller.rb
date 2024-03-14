@@ -1,6 +1,12 @@
 class SurfboardsController < ApplicationController
   def index
     @surfboards = Surfboard.all
+    @markers = @surfboards.geocoded.map do |surfboard|
+      {
+        lat: surfboard.latitude,
+        lng: surfboard.longitude
+      }
+    end
   end
 
   def show
