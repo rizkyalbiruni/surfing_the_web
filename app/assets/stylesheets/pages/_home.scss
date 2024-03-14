@@ -9,6 +9,15 @@ body, .description {
 
 }
 
+
+.navbar {
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 2;
+}
+
 .main-header {
   position: fixed;
   top: 50%;
@@ -41,11 +50,14 @@ body, .description {
 }
 
 .description {
-  font-size: 0.9em;
+  font-size: 0.7em;
   font-weight: 300;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   position: fixed;
-  bottom: 20px;
+  bottom: 40px;
   width: 100%;
   text-align: center;
+  padding-top: 5px;
+  margin-top: 40px;
+  padding: 10px 0;
 }

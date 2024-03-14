@@ -1,22 +1,31 @@
-# TODO: add form to create a new sb
+<div class="form-container">
+  <h1>ADD NEW ITEM</h1>
+  <%= form_with(model: @surfboard, local: true) do |form| %>
+    <div class="field-container">
+      <%= form.label :board_type %>
+      <%= form.text_field :board_type%>
+    </div>
 
+    <div class="field-container">
+      <%= form.label :img_url %>
+      <%= form.text_field :img_url %>
+    </div>
 
-<h1>Add a New Surfboard</h1>
+    <div class="field-container">
+      <%= form.label :description %>
+      <%= form.text_area :description %>
+    </div>
 
-<%= form_with(model: @surfboard, local: true) do |form| %>
-  <%= form.label :board_type %>
-  <%= form.text_field :board_type %>
+    <div class="field-container">
+      <%= form.label :availibility %>
+      <%= form.date_field :availability %>
+    </div>
 
-  <%= form.label :img_url %>
-  <%= form.text_field :img_url %>
+    <div class="field-container">
+      <%= form.label :location %>
+      <%= form.text_field :location %>
+    </div>
 
-  <%= form.label :description %>
-  <%= form.text_area :description %>
-
-  <%= form.label :availibility %>
-  <%= form.date_field :availibility %>
-  <%= form.label :location %>
-  <%= form.text_field :location %>
-
-  <%= form.submit %>
-<% end %>
+    <%= form.submit %>
+  <% end %>
+</div>
