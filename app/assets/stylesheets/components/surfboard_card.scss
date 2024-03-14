@@ -1,0 +1,18 @@
+.surfboard-card {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  height: 200px;
+  margin: 40px;
+  background: rgb(56, 56, 56);
+  border-radius: 10px;
+}
+
+.surfboard-image {
+  height: fit-content;
+  margin-right: 16px;
+}
+
+.surfboard-info a {
+  color: white;
+}
