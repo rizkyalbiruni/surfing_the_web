@@ -13,12 +13,20 @@ class SurfboardsController < ApplicationController
 
   def create
     @surfboard = Surfboard.new(surfboard_params)
-    @surfboard.user_id = current_user.id
+    @user = current_user
     if @surfboard.save
       redirect_to surfboard_path(@surfboard)
     else
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def upload
+    @surfboard = Surfboard.new(surfboard_params)
+    image_data = params[:file]
+    uploaded_image = Cloudinary::Uploader.upload(image_data)
+    image_url = uploaded_image['secure_url']
+    redirect_to surfboard_path(@surfboard), notice: "Image uploaded successfully!"
   end
 
   def destroy
@@ -30,6 +38,6 @@ class SurfboardsController < ApplicationController
   private
 
   def surfboard_params
-    params.require(:surfboard).permit(:type, :description, :location, :img_url)
+    params.require(:surfboard).permit(:board_type, :description, :location, :img_url, :availibility, :user_id, photos: [])
   end
 end

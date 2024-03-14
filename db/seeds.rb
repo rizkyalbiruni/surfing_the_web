@@ -20,5 +20,5 @@ end
  20.times do |i|
   Surfboard.create!(board_type: Faker::Creature::Animal.name,
   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ornare at elit non accumsan. Fusce sapien nisl, viverra in justo egestas, volutpat convallis lectus. Aliquam ut ipsum nec dolor molestie sagittis. Suspendisse volutpat laoreet ipsum eget pulvinar. Mauris sit amet lectus eget nisl cursus elementum sit amet ac massa. Mauris",
-  img_url: "https://source.unsplash.com/random?surfing", location: Faker::Address.city, user: User.all.sample)
+  img_url: "https://source.unsplash.com/random?surfing", location: Faker::Address.city, user: User.first)
 end

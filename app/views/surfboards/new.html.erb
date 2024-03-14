@@ -1,31 +1,27 @@
 <div class="form-container">
-  <h1>ADD NEW ITEM</h1>
   <%= form_with(model: @surfboard, local: true) do |form| %>
     <div class="field-container">
       <%= form.label :board_type %>
       <%= form.text_field :board_type%>
     </div>
 
-    <div class="field-container">
-      <%= form.label :img_url %>
-      <%= form.text_field :img_url %>
-    </div>
+  <h1>Add a New Surfboard</h1>
 
-    <div class="field-container">
-      <%= form.label :description %>
-      <%= form.text_area :description %>
-    </div>
-
-    <div class="field-container">
-      <%= form.label :availibility %>
-      <%= form.date_field :availability %>
-    </div>
-
-    <div class="field-container">
-      <%= form.label :location %>
-      <%= form.text_field :location %>
-    </div>
-
+  <%= simple_form_for(@surfboard) do |form| %>
+<div class="field-container">
+      <%= form.input :board_type %>
+</div>
+<div class="field-container">
+      <%= form.input :photos, as: :file, input_html: { multiple: true } %>
+ </div>
+<div class="field-container">
+      <%= form.input :description %>
+ </div>
+<div class="field-container">
+      <%= form.input :availibility %>
+ </div>
+<div class="field-container">
+      <%= form.input :location %>
+</div>
     <%= form.submit %>
   <% end %>
-</div>
