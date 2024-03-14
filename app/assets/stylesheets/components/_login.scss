@@ -1,0 +1,15 @@
+.navbar-nav .nav-item {
+
+  &.login-item {
+    background: #f00;
+    border-radius: 5px;
+
+    .nav-link {
+      padding: 5px 10px;
+      color: #fff;
+      &:hover {
+        background: lighten(#f00, 10%);
+      }
+    }
+  }
+}
