@@ -19,7 +19,7 @@ class SurfboardsController < ApplicationController
 
   def create
     @surfboard = Surfboard.new(surfboard_params)
-    @user = current_user
+    @surfboard.user = current_user
     if @surfboard.save
       redirect_to surfboard_path(@surfboard)
     else
@@ -27,13 +27,7 @@ class SurfboardsController < ApplicationController
     end
   end
 
-  def upload
-    @surfboard = Surfboard.new(surfboard_params)
-    image_data = params[:file]
-    uploaded_image = Cloudinary::Uploader.upload(image_data)
-    image_url = uploaded_image['secure_url']
-    redirect_to surfboard_path(@surfboard), notice: "Image uploaded successfully!"
-  end
+
 
   def destroy
     @surfboard = Surfboard.find(params[:id])
