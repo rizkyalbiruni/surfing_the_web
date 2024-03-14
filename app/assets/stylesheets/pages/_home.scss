@@ -61,3 +61,26 @@ body, .description {
   margin-top: 40px;
   padding: 10px 0;
 }
+.description {
+  font-size: 0.7em;
+  font-weight: 300;
+  letter-spacing: 2px;
+  position: fixed;
+  bottom: 40px;
+  width: 100%;
+  text-align: center;
+  padding-top: 5px;
+  margin-top: 40px;
+  padding: 10px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: .05em solid;
+
+
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+  animation: blink 1s step-end infinite;
+}

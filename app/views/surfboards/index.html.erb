@@ -14,16 +14,13 @@
         <% end %>
         <div class="surfboard-info">
           <h3><%= link_to surfboard.board_type, surfboard_path(surfboard) %></h3>
-          <p>Description: <%= surfboard.description %></p>
-          <p>Location: <%= surfboard.location %></p>
-          <p>Availability: <%= surfboard.availibility %></p>
         </div>
       </li>
     <% end %>
   </ul>
   </div>
 <% else %>
-  <p>No surfboards found.</p>
+  <p>Empty.</p>
 <% end %>
 
  <%= link_to "CREATE NEW", new_surfboard_path, class: "create-new-link" %>
