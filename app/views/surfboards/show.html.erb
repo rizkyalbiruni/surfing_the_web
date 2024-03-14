@@ -1,7 +1,7 @@
 <div class="container">
 <h3><%= @surfboard.board_type %></h3>
 
-<%= image_tag @surfboard.img_url, alt: @surfboard.board_type, width: 200 %>
+<%= cl_image_tag @surfboard.photos.first.key, alt: @surfboard.board_type, width: 200 %>
 
 <p><%= "Location : #{@surfboard.location}" %></p>
 <br>

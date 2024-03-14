@@ -10,10 +10,11 @@ eagerLoadControllersFrom("controllers", application)
 // import { lazyLoadControllersFrom } from "@hotwired/stimulus-loading"
 // lazyLoadControllersFrom("controllers", application)
 
-import {v2 as cloudinary} from 'cloudinary';
 
-cloudinary.config({
-  cloud_name: 'dy5xo1paq',
-  api_key: '163165127278526',
-  api_secret: '********' // change *****
-});
+import {v2 as cloudinary} from 'cloudinary'
+
+// cloudinary.config({
+//   cloud_name: 'dy5xo1paq',
+//   api_key: '163165127278526',
+//   api_secret: '********' // change *****
+// });
