@@ -1,6 +1,13 @@
 class SurfboardsController < ApplicationController
   def index
     @surfboards = Surfboard.all
+    @markers = @surfboards.geocoded.map do |surfboard|
+      {
+        lat: surfboard.latitude,
+        lng: surfboard.longitude,
+        info_window_html: render_to_string(partial: "info_window", locals: {surfboard: surfboard})
+      }
+    end
   end
 
   def show
@@ -20,8 +27,6 @@ class SurfboardsController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
-
-
 
   def destroy
     @surfboard = Surfboard.find(params[:id])

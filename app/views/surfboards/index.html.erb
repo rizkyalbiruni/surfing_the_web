@@ -26,5 +26,12 @@
   <p>No surfboards found.</p>
 <% end %>
 
- <%= link_to "CREATE NEW", new_surfboard_path, class: "create-new-link" %>
+<%= link_to "CREATE NEW", new_surfboard_path, class: "create-new-link" %>
+
+<div style="width: 100%; height: 600px;"
+  data-controller="map"
+  data-map-markers-value="<%= @markers.to_json %>"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+</div>
+
 </div>
