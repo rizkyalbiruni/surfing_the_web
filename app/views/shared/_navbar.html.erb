@@ -1,7 +1,7 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
-      <%= image_tag "https://images.unsplash.com/photo-1615169019958-78e317e81166?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8c3VyZmluZ3x8fHx8fDE3MTAyNDAxODA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080" %>
+    <%= link_to "/", class: "navbar-brand" do %>
+   <%= image_tag "https://cdn.midjourney.com/9a2acb71-a98a-41bc-8c92-28f1d924eeba/0_2.webp", alt: "Home", class: "navbar-brand-image" %>
     <% end %>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,6 +10,11 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
+
+        <li class="nav-item active">
+          <%= link_to "SURFBOARDS", surfboards_path, class: "nav-link" %>
+        </li>
+
         <% if user_signed_in? %>
           <li class="nav-item active">
             <%= link_to "HOME", "/", class: "nav-link" %>
@@ -20,14 +25,13 @@
           <li class="nav-item active">
             <%= link_to "BOOKINGS", "bookings", class: "nav-link" %>
           </li>
-          <li class="nav-item dropdown">
           <li class="nav-item active">
             <%= link_to "DASHBOARD", "dashboard", class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
-          <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar", alt: "dropdown menu" %>
-          </a>
+            <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar", alt: "dropdown menu" %>
+            </a>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "DASHBOARD", "dashboard", class: "dropdown-item" %>
               <%= link_to "LOG OUT", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>

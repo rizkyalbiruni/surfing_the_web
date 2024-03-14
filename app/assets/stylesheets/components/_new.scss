@@ -1,0 +1,43 @@
+.form-container {
+  margin-left: 10px;
+  margin-top: 60px;
+
+  h1 {
+    position: relative;
+    top: 20px;
+    left: 0;
+  }
+
+  .field-container {
+    margin-bottom: 20px;
+    &:first-of-type {
+      margin-top: 40px;
+    }
+
+    label, input, textarea, select {
+      display: block;
+      text-transform: uppercase;
+    }
+
+    input, textarea {
+      width: 80%;
+      box-sizing: border-box;
+      margin-top: 5px;
+    }
+  }
+
+  .form-submit {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #fff;
+    background-image: linear-gradient(to right, #bdc3c7, #2c3e50);
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      background-image: linear-gradient(to left, #bdc3c7, #2c3e50);
+    }
+  }
+}
