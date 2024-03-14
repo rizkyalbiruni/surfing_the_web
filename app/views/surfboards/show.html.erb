@@ -8,4 +8,9 @@
 <p><%= @surfboard.description %></p>
 
 <%= link_to "Book Now", new_surfboard_booking_path(@surfboard) %>
+
+<%= link_to "Delete",
+    surfboard_path(@surfboard),
+    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
 </div>
