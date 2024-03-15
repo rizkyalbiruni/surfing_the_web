@@ -1,6 +1,7 @@
 <div class="container pt-5">
 <h3><%= @surfboard.board_type %></h3>
 
+
 <!-- this codes below are for carousel -->
 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="width: 50%;">
   <div class="carousel-indicators">
@@ -35,6 +36,7 @@
           <p>Location: <%= @surfboard.location %></p>
           <p>Availability: <%= @surfboard.availibility %></p>
 
+
 <div data-controller="toggle">
 <button data-action="click->toggle#fire" class="btn btn-outline-primary">Book Now</button>
 
@@ -53,8 +55,6 @@
 </div>
 </div>
 
-<%= link_to "Delete",
-    surfboard_path(@surfboard),
-    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-%>
-</div>
+
+
+<%= link_to "BOOK", new_surfboard_booking_path(@surfboard) %>
