@@ -1,7 +1,36 @@
-<div class="container">
+<div class="container pt-5">
 <h3><%= @surfboard.board_type %></h3>
 
-<%= cl_image_tag @surfboard.photos.first.key, alt: @surfboard.board_type, width: 200 %>
+<!-- this codes below are for carousel -->
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="width: 50%;">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <%= cl_image_tag @surfboard.photos[0].key, alt: @surfboard.board_type, class: "d-block w-100" %>
+    </div>
+    <div class="carousel-item">
+      <%= cl_image_tag @surfboard.photos[1].key, alt: @surfboard.board_type, class: "d-block w-100" %>
+    </div>
+    <div class="carousel-item">
+      <%= cl_image_tag @surfboard.photos[2].key, alt: @surfboard.board_type, class: "d-block w-100" %>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<!-- this codes above are for carousel -->
+
+<br>
           <p>Description: <%= @surfboard.description %></p>
           <p>Location: <%= @surfboard.location %></p>
           <p>Availability: <%= @surfboard.availibility %></p>
