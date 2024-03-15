@@ -22,8 +22,6 @@
   overflow-y: hidden;
   padding: 20px;
   box-sizing: border-box;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: thin; // Make scrollbar slightly visible
   &::-webkit-scrollbar {
     display: block;
     width: 8px; // Adjusted for visibility
