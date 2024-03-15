@@ -15,7 +15,11 @@
         <%= form.input :availibility %>
   </div>
   <div class="field-container">
-        <%= form.input :location %>
+        <%= form.input :location,
+        label: "location", 
+  input_html: {data: {address_autocomplete_target: "location"}, class: "d-none"},
+  wrapper_html: {data: {controller: "address-autocomplete", address_autocomplete_api_key_value: ENV["MAPBOX_API_KEY"]}}
+%>
   </div>
       <%= form.submit %>
     <% end %>
