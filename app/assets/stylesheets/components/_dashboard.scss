@@ -1,0 +1,69 @@
+.dashboard-section {
+  margin-top: 7rem;
+  padding-bottom: 2rem;
+}
+
+
+.card {
+  margin-bottom: 2rem;
+  border-top: none;
+  width: 100%;
+  border-radius: 10px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+
+.profile-avatar-card {
+  .avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    border: 4px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+}
+
+
+    .dashboard-section__user-name,
+    .dashboard-section__user-username {
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+
+    }
+
+    .dashboard-section__user-email {
+      font-size: 1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .dashboard-section__user-description {
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+  .profile-details-card {
+    .dashboard-section__creations-title,
+    .dashboard-section__booking-title {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+    .card-product {
+      .card-product-img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .card {
+      background: linear-gradient(to bottom, #000000 0%, #0b0a0a 50%, #0e0d0d 100%) !important;
+      color: rgb(255, 255, 255) !important;
+
+    }

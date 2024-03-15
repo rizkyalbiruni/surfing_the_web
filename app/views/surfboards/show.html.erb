@@ -2,9 +2,12 @@
 <h3><%= @surfboard.board_type %></h3>
 
 <%= cl_image_tag @surfboard.photos.first.key, alt: @surfboard.board_type, width: 200 %>
-          <p>Description: <%= @surfboard.description %></p>
-          <p>Location: <%= @surfboard.location %></p>
-          <p>Availability: <%= @surfboard.availibility %></p>
+
+
+          <p>INFO <%= @surfboard.description %></p>
+          <p>LOCATION <%= @surfboard.location %></p>
+          <p>AVAILABILITY <%= @surfboard.availibility %></p>
+
 
 <div data-controller="toggle">
 <button data-action="click->toggle#fire" class="btn btn-outline-primary">Book Now</button>
@@ -24,8 +27,6 @@
 </div>
 </div>
 
-<%= link_to "Delete",
-    surfboard_path(@surfboard),
-    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-%>
-</div>
+
+
+<%= link_to "BOOK", new_surfboard_booking_path(@surfboard) %>
