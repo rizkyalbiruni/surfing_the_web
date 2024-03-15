@@ -45,11 +45,13 @@
     padding: 10px 20px;
     border-radius: 8px;
     text-decoration: none;
-    color: #fff;
+    color: #000000;
     text-transform: uppercase
   }
 
-
+p {
+  color: #000000;
+}
     &:hover {
       //background-image: linear-gradient(to left, #bdc3c7, #2c3e50);
     }
