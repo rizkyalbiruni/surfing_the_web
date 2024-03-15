@@ -49,6 +49,18 @@
   // z-index: -1000;
 }
 
+.mapboxgl-popup-content {
+  p {
+    color: black;
+  }
+  h2 {
+    a {
+      color: black;
+    }
+  }
+}
+
+
 
 @media (max-width: 768px) {
   .surfboards-container, .map-container {
@@ -56,8 +68,11 @@
     right: 20px;
   }
 
-  .surfboards-container {
+  .surfboards_card {
     top: 60px;
     bottom: 40%;
-  }
+
+}
+
+
 }
