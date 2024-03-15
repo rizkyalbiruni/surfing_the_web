@@ -1,5 +1,7 @@
 <div class="surfboards-index">
-<h1>DISCOVER</h1>
+  <div class="page-title"> <!-- Changed from <h1> to a div with a class for specificity -->
+    DISCOVER
+  </div>
   <div class="surfboards-container">
     <% if @surfboards.any? %>
       <div id='surfboard-container'>
@@ -26,6 +28,5 @@
   <div class="map-container" data-controller="map"
     data-map-markers-value="<%= @markers.to_json %>"
     data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-
   </div>
 </div>

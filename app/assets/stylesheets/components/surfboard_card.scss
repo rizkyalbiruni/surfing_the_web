@@ -5,9 +5,16 @@
   position: relative;
 }
 
+.page-title { // New class for the title
+  position: absolute;
+  top: 20px; // Adjusted for not too close to the borders
+  left: 20px; // Adjusted for not too close to the borders
+  font-size: 24px; // Example font size, adjust as needed
+}
+
 .surfboards-container {
   position: fixed;
-  top: 120px;
+  top: 70px; // Adjusted to ensure visibility above the map container
   left: 200px;
   right: 200px;
   bottom: 30%;
@@ -16,9 +23,14 @@
   padding: 20px;
   box-sizing: border-box;
   -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
+  scrollbar-width: thin; // Make scrollbar slightly visible
   &::-webkit-scrollbar {
-    display: none;
+    display: block;
+    width: 8px; // Adjusted for visibility
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,0.2); // Adjusted for visibility
+    border-radius: 4px;
   }
 }
 
@@ -38,7 +50,7 @@
   }
 
   .surfboards-container {
-    top: 100px;
+    top: 60px; // Adjusted for visibility above the map container on smaller screens
     bottom: 40%;
   }
 }

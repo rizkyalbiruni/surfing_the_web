@@ -1,21 +1,48 @@
-<h1>MY DASHBOARD</h1>
-<p> E-MAIL <%= @user.email %> </p>
-  <h2> CREATED </h2>
-  <ul>
-    <% @user.surfboards.each do |surfboard|%>
-    <li> LOCATION <%= surfboard.location%> ,  Board-type: <%=surfboard.board_type%>, <%= link_to surfboard.board_type, surfboard_path(surfboard) %></li>
-    <% end %>
-  </ul>
+<div class="dashboard-section container pt-3">
+  <div class="row justify-content-center">
 
-  <h2> BOOKINGS </h2>
-  <ul>
-    <% @user.bookings.each do |booking|%>
-    <% duration_in_days = (booking.end_date - booking.start_date).to_i + 1 %>
-    <li>
-     <%= link_to "CREATE NEW", new_surfboard_path, class: "create-new-link" %>
+    <div class="col-12 mb-4">
+      <div class="card profile-avatar-card">
+        <div class="card-body text-center">
+          <%= image_tag "https://i.etsystatic.com/35508757/r/il/c35d1b/4057837775/il_fullxfull.4057837775_ghge.jpg", class: "avatar rounded-circle mb-3", alt: "User avatar" %>
+          <h2 class="dashboard-section__user-name">TYLER</h2>
+          <p class="dashboard-section__user-username">@tylerdurden</p>
+          <p class="dashboard-section__user-description">Lover of the ocean waves and creating soap.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 mb-4">
+      <div class="card profile-details-card">
+        <div class="card-body">
+          <h2 class="dashboard-section__creations-title">Creations</h2>
+          <ul>
+            <% @user.surfboards.each do |surfboard| %>
+            <li> LOCATION <%= surfboard.location %>, Board-type: <%= surfboard.board_type %>, <%= link_to surfboard.board_type, surfboard_path(surfboard) %></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 mb-4">
+      <div class="card profile-details-card">
+        <div class="card-body">
+          <h2 class="dashboard-section__booking-title">Booking History</h2>
+          <% @user.bookings.each do |booking| %>
+          <% duration_in_days = (booking.end_date - booking.start_date).to_i + 1 %>
+          <div class="card-product mb-3">
+            <img src="<%= cl_image_path booking.surfboard.photos.first.key %>" alt="<%= booking.surfboard.board_type %>" class="card-product-img" />
+            <div class="card-product-infos">
+              <p><%= booking.surfboard.board_type %></p>
+              <%= link_to "Delete", booking_path(booking), method: :delete, data: { confirm: "Are you sure?" }, class: "text-danger" %>
+              <p><%= booking.start_date.strftime("%B %e") %> - <%= booking.end_date.strftime("%B %e") %>
+                <strong>(<%= duration_in_days %> <%= 'day'.pluralize(duration_in_days) %>)</strong></p>
+            </div>
+          </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-    <%= booking.start_date.strftime("%B %e") %> to <%= booking.end_date.strftime("%B %e") %> -
-    <strong>(<%= duration_in_days %> <%= 'day'.pluralize(duration_in_days) %>)</strong>
-    </li>
-    <% end %>
-  </ul>
