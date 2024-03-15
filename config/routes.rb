@@ -13,7 +13,7 @@ Rails.application.routes.draw do
     resources :bookings, only: [:new, :create]
   end
 
-  resources :surfboards, only: [:destroy]
+  resources :surfboards, only: [:destroy], as: "erase"
   resources :bookings, only: [:destroy]
 
   get "/dashboard", to: "pages#dashboard"

@@ -1,7 +1,9 @@
 <div class="container pt-5">
 <h3><%= @surfboard.board_type %></h3>
 
-
+<% if @surfboard.photos.length == 1 %>
+<%= cl_image_tag @surfboard.photos.first.key, alt: @surfboard.board_type, width: 500  %>
+<% else %>
 <!-- this codes below are for carousel -->
 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="width: 50%;">
   <div class="carousel-indicators">
@@ -29,6 +31,7 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
+<% end %>
 <!-- this codes above are for carousel -->
 
 <br>
@@ -55,6 +58,4 @@
 </div>
 </div>
 
-
-
-<%= link_to "BOOK", new_surfboard_booking_path(@surfboard) %>
+<%= link_to "Delete", erase_path(@surfboard), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "text-danger" %>

@@ -35,7 +35,7 @@
             <img src="<%= cl_image_path booking.surfboard.photos.first.key %>" alt="<%= booking.surfboard.board_type %>" class="card-product-img" />
             <div class="card-product-infos">
               <p><%= booking.surfboard.board_type %></p>
-              <%= link_to "Delete", booking_path(booking), method: :delete, data: { confirm: "Are you sure?" }, class: "text-danger" %>
+              <%= link_to "Delete", booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "text-danger" %>
               <p><%= booking.start_date.strftime("%B %e") %> - <%= booking.end_date.strftime("%B %e") %>
                 <strong>(<%= duration_in_days %> <%= 'day'.pluralize(duration_in_days) %>)</strong></p>
             </div>
